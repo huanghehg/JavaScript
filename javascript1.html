@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<h1>JavaScript入坑(一)</h1>
+
+<script type="text/javascript">
+document.write("<p>test1</p>");
+</script>
+
+<button onclick="alert('test1')">戳这里</button>
+
+<p id="test1">改变之前的数据</p>
+
+<script type="text/javascript">
+function changeTest() {
+	x = document.getElementById('test1');
+	x.innerHTML = "改变之后的数据";
+}
+</script>
+
+<button onclick=changeTest()>戳这里改变</button>
+
+</body>
+</html>
