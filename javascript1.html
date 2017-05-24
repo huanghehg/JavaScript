@@ -24,5 +24,19 @@ function changeTest() {
 
 <button onclick=changeTest()>戳这里改变</button>
 
+<script type="text/javascript">
+	function changeImage() {
+		image = document.getElementById('tes1image');
+		if (image.src.match("ermilio")) {
+			image.src = "./resources/img/mew_interlaced.png"
+		}else {
+			image.src = "./resources/img/ermilio.png"
+		}
+		
+	}
+</script>
+
+<img id="tes1image" src="./resources/img/ermilio.png" onclick="changeImage()">
+
 </body>
 </html>
