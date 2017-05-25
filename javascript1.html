@@ -11,32 +11,54 @@
 document.write("<p>test1</p>");
 </script>
 
+<script type="text/javascript">
+	function documentWrite() {
+		document.write('覆盖文档');
+	}
+</script>
+
+<button onclick="documentWrite()">测试documentWrite</button>
+
 <button onclick="alert('test1')">戳这里</button>
 
 <p id="test1">改变之前的数据</p>
 
-<script type="text/javascript">
-function changeTest() {
-	x = document.getElementById('test1');
-	x.innerHTML = "改变之后的数据";
-}
-</script>
-
 <button onclick=changeTest()>戳这里改变</button>
-
-<script type="text/javascript">
-	function changeImage() {
-		image = document.getElementById('tes1image');
-		if (image.src.match("ermilio")) {
-			image.src = "./resources/img/mew_interlaced.png"
-		}else {
-			image.src = "./resources/img/ermilio.png"
-		}
-		
-	}
-</script>
 
 <img id="tes1image" src="./resources/img/ermilio.png" onclick="changeImage()">
 
+<input type="text" id="test1input">
+
+<button type="button" onclick="vertify()">验证</button>
+
+<button onclick="testjs()">验证外部js</button>
+
 </body>
 </html>
+
+<script type="text/javascript">
+
+function changeTest() {
+	x = document.getElementById('test1');
+	x.innerHTML = "改变之后的数据";
+	x.style.color="#ff0000"
+}
+
+function changeImage() {
+	image = document.getElementById('tes1image');
+	if (image.src.match("ermilio")) {
+		image.src = "./resources/img/mew_interlaced.png"
+	}else {
+		image.src = "./resources/img/ermilio.png"
+	}
+}
+
+function vertify(){
+	var x = document.getElementById("test1input").value;
+	if (x==""||isNaN(x)) {
+		alert('只能输入数字');
+	}
+}
+</script>
+
+<script type="text/javascript" src="./javascript.js"></script>

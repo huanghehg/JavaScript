@@ -15,6 +15,7 @@ ___
 document.write("<h1>This is a heading</h1>");
 document.write("<h2>This is a paragraph</h2>");
 ```
+<strong>*`document.write`只能在加载过程中输出，加载完毕输出会覆盖整个文档*</strong>
 
 <strong>`alert(), onclick()`</strong>
 
@@ -53,3 +54,23 @@ function changeTest() {
 
 <img id="tes1image" src="./resources/img/ermilio.png" onclick="changeImage()">
 ```
+<strong>`导入外部js`</strong>
+
+```	javascript
+<script type="text/javascript" src="/javascript.js"></script>
+
+外部脚本不能包含 <script> 标签。
+```
+
+---
+
+<strong>变量</strong>
+
+重新声明的变量值不会消失
+
+```
+var a=2;
+var a;
+(此时a还是2)
+```
+
